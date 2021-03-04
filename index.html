@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Covid app</title>
+</head>
+<body>
+    <canvas class="" id="myChart"></canvas>
+    <div class="lds-facebook hidden"><div></div><div></div><div></div></div>
+    <div class="error hidden">No data at this moment.</div>
+    <div class="flex buttons-status-container">
+        <button class="btn" id="deaths">Deaths</button>
+        <button class="btn" id="confirmed">Confirmed</button>
+        <button class="btn" id="recovered">Recovered</button>
+        <button class="btn" id="critical">Critical</button>
+        <button class="btn hidden" id="death-rate">Death Rate</button>
+        <button class="btn hidden" id="recovery-rate">Death Rate</button>
+    </div>
+    <div class="flex buttons-container">
+        <button class="btn" id="asia">Asia</button>
+        <button class="btn" id="europe">Europe</button>
+        <button class="btn" id="africa">Africa</button>
+        <button class="btn" id="americas">Americas</button>
+        <button class="btn" id="oceania">Oceania</button>
+        <button class="btn" id="world">World</button>
+    </div>
+    <div class="text">
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="/index.js"></script>
+</body>
+</html>
