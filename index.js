@@ -54,8 +54,8 @@ function chartTypeByUser(type = `line`) {
 }
 
 function changeType(e) {
-    console.log(e.currentTarget.textContent.toLowerCase().split(' '))
     myChart.config.type = e.currentTarget.textContent.toLowerCase().split(' ')[0];
+    userCosenType = e.currentTarget.textContent.toLowerCase().split(' ')[0];
     userDisplayChoose.classList.add(`hidden`)
     mainBtn.classList.remove(`hidden`)
     userChangeTypeBtn.classList.remove(`hidden`)
