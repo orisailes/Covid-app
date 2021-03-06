@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 * {
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background: rgba(255, 250, 240, 0.652);
 }
 
 #myChart {
@@ -12,9 +19,9 @@
     border-bottom: 2px dotted rgba(92, 92, 92, 0.2);
 }
 
-.error{
+.error {
     position: relative;
-    left: 45%;
+    left: 42%;
     font-size: larger;
     font-weight: bold;
 }
@@ -22,6 +29,8 @@
 .hidden {
     display: none !important;
 }
+
+
 
 .flex {
     display: flex;
@@ -35,12 +44,12 @@
     margin: 0.2rem;
     margin-top: 1rem;
     background: transparent;
-    border: 1.5px solid rgba(255, 0, 0, 0.597);
+    border: 1.5px solid firebrick;
     border-radius: 0.5rem;
 }
 
 .btn:hover {
-    background: rgba(255, 0, 0, 0.9);
+    background: firebrick;
     opacity: 0.8;
 }
 
@@ -77,7 +86,7 @@
     position: absolute;
     left: 8px;
     width: 16px;
-    background: purple;
+    background: firebrick;
     animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
 
@@ -107,4 +116,76 @@
         top: 24px;
         height: 32px;
     }
+}
+
+
+/* dropdown */
+
+.user-display-choose {
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.user-display-choose h3 {
+    opacity: 0;
+    padding: 1rem;
+    transform: translateX(150px);
+    background: snow;
+    animation: myMove 1s forwards;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0,0.2);
+}
+
+
+.user-display-choose h4 {
+    font-size: 1.2rem;
+    background: snow;
+}
+
+.flex-options {
+    opacity: 0;
+    transform: translateY(150px);
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.8rem;
+}
+
+@keyframes myMove {
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes myDrop {
+    100% {
+        opacity: 0.8;
+        transform: translateY(0);
+    }
+}
+
+.opt{
+    font-weight: lighter;
+}
+
+.opt:hover {
+    background: #a0a0a0;
+    outline: 1px solid rgba(0, 0, 0,0.6);
+    font-weight: 900;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3.5px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }

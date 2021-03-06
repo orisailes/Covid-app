@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="./style.css">
+
     <title>Covid app</title>
 </head>
+
 <body>
-    <canvas class="" id="myChart"></canvas>
-    <div class="lds-facebook hidden"><div></div><div></div><div></div></div>
+    <canvas class="canvas" id="myChart"></canvas>
+    <div class="lds-facebook hidden">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
     <div class="error hidden">No data at this moment.</div>
-    <div class="flex buttons-status-container">
+    <div class="hidden user-display-choose">
+        <h3>Choose Table Type <p class="arrow down"></p>
+        </h3>
+        <div class="flex-options">
+            <h4 class="hidden opt"><span class="white">Line</span><br> (recommended)</h4>
+            <h4 class="hidden opt"><span class="white">Bar</span></h4>
+            <h4 class="hidden opt"><span class="white">Pie</span><br> (recommended only <br>to see percantage)</h4>
+        </div>
+    </div>
+    <div class="change-type flex">
+        <button class="btn hidden change-type-btn">Change Table Type</button>
+        <button class="btn hidden covid-today">Covid Today</button>
+    </div>
+    <div class="flex hidden buttons-status-container">
         <button class="btn" id="deaths">Deaths</button>
         <button class="btn" id="confirmed">Confirmed</button>
         <button class="btn" id="recovered">Recovered</button>
@@ -28,9 +50,10 @@
         <button class="btn" id="world">World</button>
     </div>
     <div class="text">
-        
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="/index.js"></script>
 </body>
+
 </html>
