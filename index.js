@@ -127,10 +127,11 @@ var myChart = new Chart(ctx, {
 
 //*make labels by click on one of regions buttons
 function updateChartsByClick(e) {
-    myChart.config.type = userCosenType ;
+    myChart.config.type = userCosenType;
     canvas.style.opacity = "0.5"
     statusBtns.classList.remove(`hidden`)
     loader.classList.remove(`hidden`)
+    covidToday.classList.add(`hidden`)
 
     try {
         errorDiv.classList.add(`hidden`)
@@ -194,7 +195,7 @@ function updateChartsByClick(e) {
 
 //*small countries bottuns below
 function makeCountriesDivs() {
-    myChart.config.type = userCosenType ;
+    myChart.config.type = userCosenType;
     canvas.style.opacity = "0.5"
     statusBtns.classList.remove(`hidden`)
     errorDiv.classList.add(`hidden`)
@@ -228,7 +229,7 @@ function changeColor(color) {
 
 //*display different status (deaths/confirmed/recovered/critical) 
 function updateDataByClick(e) {
-    myChart.config.type = userCosenType ;
+    myChart.config.type = userCosenType;
     canvas.style.opacity = "0.5"
     statusBtns.classList.remove(`hidden`)
     errorDiv.classList.add(`hidden`)
@@ -258,12 +259,14 @@ function updateDataByClick(e) {
     myChart.update();
     loader.classList.add(`hidden`)
     canvas.style.opacity = "1"
+    covidToday.classList.add(`hidden`)
+
 }
 
 
 //* display chart details after user click specific country
 function displayIndividualCountry(e) {
-    myChart.config.type = 'bar' ;
+    myChart.config.type = 'bar';
     statusBtns.classList.add(`hidden`)
     errorDiv.classList.add(`hidden`)
     loader.classList.remove(`hidden`)
